@@ -1,0 +1,12 @@
+My personal aliases file for ubuntu command line operations.
+
+To setup:
+* mkdir ~/.aliases
+* cd ~/.aliases
+* if you're jsgarvin
+	* git clone git@github.com:jsgarvin/aliases.git 
+* else
+	* git clone git://github.com/jsgarvin/aliases.git 
+* run the following line *and* add it to the end of ~/.bashrc
+   source ~/.aliases/aliases
+
