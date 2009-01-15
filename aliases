@@ -24,8 +24,8 @@ function gcb() {
 	git checkout "$@";
 }
 
-#gpb - git push branch
-#create a local branch and pushes it to github (or wherever)
+#gdb - git delete branch
+#delete a branch locally and on github (or wherever)
 function gdb() { 
 	git checkout master;
 	git push origin :"$@";
