@@ -22,6 +22,17 @@ function gcm() {
 	git commit -m "$@";
 }
 
+#gp - git push
+function gp() {
+	git push
+}
+
+#gcmp - git commit -m and push
+function gcmp() {
+	gcm "$@";
+	gp;
+}
+
 #gcb - git create branch
 #create a local branch and pushes it to github (or wherever)
 function gcb() { 
