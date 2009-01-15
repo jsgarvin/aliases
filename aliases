@@ -11,9 +11,15 @@ alias rrcov='rake metrics:coverage; firefox tmp/metric_fu/coverage/index.html; r
 ###############
 # Git Aliases #
 ###############
+
 #gco - git checkout
 function gco() {
 	git checkout "$@";
+}
+
+#gcm - git commit -m
+function gcm() {
+	git commit -m "$@";
 }
 
 #gcb - git create branch
@@ -31,6 +37,7 @@ function gdb() {
 	git push origin :"$@";
 	git branch -d "$@";
 }
+
 
 # add git branch to the command prompt
 function parse_git_branch() {
