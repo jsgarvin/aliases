@@ -1,0 +1,32 @@
+alias ea='vim ~/.aliases/aliases; source ~/.aliases/aliases'
+alias sc='script/console'
+alias ss='script/server'
+alias rrcov='rake metrics:coverage; firefox tmp/metric_fu/coverage/index.html; rake stats'
+
+function foo() { echo "$@"; }
+
+#gco - git checkout
+function gco() {
+	git checkout "$@";
+}
+
+#gcb - git create branch
+#create a local branch and pushes it to github (or wherever)
+function gcb() { 
+	git branch "$@";
+	git push origin "$@";
+	git checkout "$@";
+}
+
+#gpb - git push branch
+#create a local branch and pushes it to github (or wherever)
+function gdb() { 
+	git checkout master;
+	git push origin :"$@";
+	git branch -d "$@";
+}
+
+function parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\*\1/'
+}
+PS1="\w\$(parse_git_branch) $ "
