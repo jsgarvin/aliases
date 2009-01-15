@@ -24,7 +24,7 @@ function gcm() {
 
 #gp - git push
 function gp() {
-	git push
+	git push "$@";
 }
 
 #gcmp - git commit -m and push
