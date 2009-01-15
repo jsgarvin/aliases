@@ -1,10 +1,16 @@
+# Use 'ea' to edit this file
 alias ea='vim ~/.aliases/aliases; source ~/.aliases/aliases'
+
+#################
+# Rails Aliases #
+#################
 alias sc='script/console'
 alias ss='script/server'
 alias rrcov='rake metrics:coverage; firefox tmp/metric_fu/coverage/index.html; rake stats'
 
-function foo() { echo "$@"; }
-
+###############
+# Git Aliases #
+###############
 #gco - git checkout
 function gco() {
 	git checkout "$@";
@@ -26,6 +32,7 @@ function gdb() {
 	git branch -d "$@";
 }
 
+# add git branch to the command prompt
 function parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\*\1/'
 }
