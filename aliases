@@ -33,6 +33,11 @@ function gcmp() {
 	gp;
 }
 
+#gcamp - gcmp -a
+function gcamp() {
+	gcmp "$@" -a
+}
+
 #gcb - git create branch
 #create a local branch and pushes it to github (or wherever)
 function gcb() { 
