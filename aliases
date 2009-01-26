@@ -1,5 +1,6 @@
 # Use 'ea' to edit this file
 alias ea='vim ~/.aliases/aliases; source ~/.aliases/aliases'
+source ~/.aliases/aliases.pvt
 
 #################
 # Rails Aliases #
