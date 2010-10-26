@@ -6,7 +6,10 @@ source ~/.aliases/aliases.pvt
 # Rails Aliases #
 #################
 alias sc='script/console'
+alias src='script/rails console'
 alias ss='script/server'
+alias srs='script/rails server'
+alias srg='script/rails generate'
 alias rrcov='rake metrics:coverage; firefox tmp/metric_fu/coverage/index.html; rake stats'
 
 ###############
