@@ -66,7 +66,7 @@ function parse_git_branch() {
 
 # add rvm info to the command prompt
 function parse_rvm_info() {
-	rvm info | head -1 2> /dev/null | sed -e 's/\(.*\):/\1/'
+	rvm info | head -2 2> /dev/null | sed -e '/^$/d' -e 's/\(.*\):/\1/'
 }
 PS1="\w|\[\e[1;36m\]\$(parse_git_branch)\[\e[0m\]|\[\e[1;35m\]\$(parse_rvm_info)\[\e[0m\]| $ "
 
